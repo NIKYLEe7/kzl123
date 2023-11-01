@@ -1,11 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  .dick-character {
+    width: 100px;
+    height: 140px;
+    background-color: #ffcc99;
+    position: relative;
+    animation: moveUpDown 2s linear infinite;
+    border-radius: 50px;
+    border: 2px solid #000;
+  }
+
+  .dick-character:before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 25px;
+    border: 2px solid #000;
+  }
+
+  .dick-character:after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 20px;
+    background: #ffcc99;
+  }
+
+  @keyframes moveUpDown {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+</style>
 </head>
 <body>
-    <h1>1231232321123123</h1>
+
+<div class="dick-character"></div>
+
 </body>
 </html>
