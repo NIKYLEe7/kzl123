@@ -4,53 +4,66 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  .dick-character {
-    width: 100px;
-    height: 140px;
-    background-color: #ffcc99;
+  .logo-container {
     position: relative;
-    animation: moveUpDown 2s linear infinite;
-    border-radius: 50px;
-    border: 2px solid #000;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: red;
+    overflow: hidden;
   }
 
-  .dick-character:before {
-    content: '';
+  .stripe {
+    background-color: yellow;
+    width: 30px;
+    height: 100%;
     position: absolute;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50px;
-    height: 50px;
-    background: #fff;
-    border-radius: 25px;
-    border: 2px solid #000;
+    left: 85px;
+    transform: rotate(45deg);
+    transform-origin: bottom left;
   }
 
-  .dick-character:after {
-    content: '';
+  .stripe-black {
+    background-color: black;
+    width: 30px;
+    height: 100%;
     position: absolute;
-    bottom: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 20px;
-    background: #ffcc99;
+    left: 55px;
+    transform: rotate(45deg);
+    transform-origin: bottom left;
   }
 
-  @keyframes moveUpDown {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-20px);
-    }
+  .text {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 70px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+  }
+
+  .date {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 150px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
   }
 </style>
 </head>
 <body>
 
-<div class="dick-character"></div>
+<div class="logo-container">
+  <div class="stripe-black"></div>
+  <div class="stripe"></div>
+  <div class="text">БОТЕВЬ</div>
+  <div class="date">1912</div>
+</div>
 
 </body>
 </html>
